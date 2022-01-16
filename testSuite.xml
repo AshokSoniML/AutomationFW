@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" data-provider-thread-count="3">
+
+	<listeners>
+		<listener class-name="de.dimetis.boss.listeners.ListenersClass"></listener>
+		<listener class-name="de.dimetis.boss.listeners.MethodInterceptor"></listener>
+		<listener class-name="de.dimetis.boss.listeners.AnnotationTransformer"></listener>
+	</listeners>
+		
+  <test thread-count="1" name="Test" parallel="methods">
+    <classes>
+      <class name="de.dimetis.boss.rough.LoginOfAdministrator"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
